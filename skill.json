@@ -1,0 +1,29 @@
+{
+  "$schema_version": 1,
+  "name": "srs-ag02-requirement-extraction",
+  "version": "2.3.0",
+  "node_id": "AG-02",
+  "kind": "agent",
+  "summary": "Agent Node AG-02 (Bước B4 SOP viết SRS): trích xuất yêu cầu nguyên tử từ lớp SỰ KIỆN của AG-01, phân loại FR/NFR/BR/CON, gắn trích dẫn nguồn, chấm mức rõ ràng (CLEAR/NEEDS_CLARIFICATION/AMBIGUOUS), đối chiếu độ phủ với bản tóm tắt và gom yêu cầu theo nhu cầu khách hàng dạng Job To Be Done (mỗi yêu…",
+  "repository": "https://github.com/HaNguyen1409/srs-ag02-requirement-extraction",
+  "license": "MIT",
+  "interface": {
+    "contract": "SKILL.md — đầu vào/đầu ra là tài liệu Markdown/JSON mô tả trong skill; không gọi trực tiếp skill khác",
+    "output_artifact": "REQ (B5 → tài liệu Pha A, RTM TL-04)",
+    "sop_steps": [
+      {
+        "step": "4",
+        "title": "Trích xuất yêu cầu nguyên tử + gom theo công việc JTBD (JOB)",
+        "type": "Agent",
+        "receives_from": "B2, B3",
+        "sends_to": "B5"
+      }
+    ]
+  },
+  "upstream": {
+    "srs-ag01-transcript-summary": "^2.0.0"
+  },
+  "downstream": [],
+  "orchestrates": {},
+  "runtime": null
+}
